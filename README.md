@@ -16,6 +16,7 @@ with `skrobot.models.urdf.RobotModelFromURDF`.
 | `fetch_description.tar.gz` | Fetch Robotics Fetch | [`fetchrobotics/fetch_ros`](https://github.com/fetchrobotics/fetch_ros) | **CC BY-NC-SA 4.0** ⚠ |
 | `franka_description.tar.gz` | Franka Emika Panda | [`frankaemika/franka_ros`](https://github.com/frankaemika/franka_ros) | Apache-2.0 |
 | `nextage_description.tar.gz` | Kawada NEXTAGE OPEN | [`tork-a/rtmros_nextage`](https://github.com/tork-a/rtmros_nextage) | BSD-3-Clause |
+| `hydrus_description.tar.gz` | JSK HYDRUS transformable multirotor | [`jsk-ros-pkg/jsk_aerial_robot`](https://github.com/jsk-ros-pkg/jsk_aerial_robot) | BSD |
 | `tycoon_description.tar.gz` | JSK TYCOON modular robot | (JSK lab) | (TBD) |
 | `griphis_description.tar.gz` | JSK GRIPHIS multi-joint modular robot | (JSK lab) | (TBD) |
 | `differential_wrist_sample.tar.gz` | scikit-robot prototyping sample | (in-repo) | MIT |
@@ -75,6 +76,21 @@ upstream paper.
 % No canonical academic paper. Cite the upstream description package:
 %   Kei Okada, TORK and contributors, "rtmros_nextage,"
 %   https://github.com/tork-a/rtmros_nextage
+
+% --- HYDRUS (JSK) ---
+@article{zhao2018hydrus,
+  author  = {Zhao, Moju and Kawasaki, Koji and Anzai, Tomoki and
+             Chen, Xiangyu and Noda, Shintaro and Shi, Fan and
+             Okada, Kei and Inaba, Masayuki},
+  title   = {Transformable multirotor with two-dimensional multilinks:
+             Modeling, control, and whole-body aerial manipulation},
+  journal = {The International Journal of Robotics Research},
+  volume  = {37},
+  number  = {9},
+  pages   = {1085--1112},
+  year    = {2018},
+  doi     = {10.1177/0278364918801639},
+}
 
 % --- TYCOON (JSK) ---
 @article{matsuo2026tycoon,
