@@ -117,6 +117,22 @@ upstream paper.
   pages     = {1P1--E11},
   year      = {2025},
 }
+
+% --- SEED-Noid / Aero (JSK) ---
+@article{sasabuchi2018seednoid,
+  author    = {Sasabuchi, Kazuhiro and Yaguchi, Hiroaki and
+               Nagahama, Kotaro and Hori, Shintaro and
+               Mizohana, Hiroto and Inaba, Masayuki},
+  title     = {The {SEEDNoid} Robot Platform: Designing a Multipurpose
+               Compact Robot From Continuous Evaluation and Lessons From
+               Competitions},
+  journal   = {IEEE Robotics and Automation Letters},
+  volume    = {3},
+  number    = {4},
+  pages     = {3983--3990},
+  year      = {2018},
+  publisher = {IEEE},
+}
 ```
 
 ## License
