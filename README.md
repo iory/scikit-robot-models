@@ -19,6 +19,7 @@ with `skrobot.models.urdf.RobotModelFromURDF`.
 | `hydrus_description.tar.gz` | JSK HYDRUS transformable multirotor | [`jsk-ros-pkg/jsk_aerial_robot`](https://github.com/jsk-ros-pkg/jsk_aerial_robot) | BSD |
 | `tycoon_description.tar.gz` | JSK TYCOON modular robot | (JSK lab) | (TBD) |
 | `griphis_description.tar.gz` | JSK GRIPHIS multi-joint modular robot | (JSK lab) | (TBD) |
+| `aero_description.tar.gz` | SEED-Noid / AeroTypeFCESy (JSK config; with-hand & handless) | [`seed-solutions/aero-ros-pkg`](https://github.com/seed-solutions/aero-ros-pkg) | EPL |
 | `differential_wrist_sample.tar.gz` | scikit-robot prototyping sample | (in-repo) | MIT |
 
 > ⚠️ **Fetch is CC BY-NC-SA 4.0** (NonCommercial). The license is declared
@@ -115,6 +116,22 @@ upstream paper.
   booktitle = {JSME Conference on Robotics and Mechatronics},
   pages     = {1P1--E11},
   year      = {2025},
+}
+
+% --- SEED-Noid / Aero (JSK) ---
+@article{sasabuchi2018seednoid,
+  author    = {Sasabuchi, Kazuhiro and Yaguchi, Hiroaki and
+               Nagahama, Kotaro and Hori, Shintaro and
+               Mizohana, Hiroto and Inaba, Masayuki},
+  title     = {The {SEEDNoid} Robot Platform: Designing a Multipurpose
+               Compact Robot From Continuous Evaluation and Lessons From
+               Competitions},
+  journal   = {IEEE Robotics and Automation Letters},
+  volume    = {3},
+  number    = {4},
+  pages     = {3983--3990},
+  year      = {2018},
+  publisher = {IEEE},
 }
 ```
 
