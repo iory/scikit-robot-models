@@ -20,6 +20,7 @@ with `skrobot.models.urdf.RobotModelFromURDF`.
 | `tycoon_description.tar.gz` | JSK TYCOON modular robot | (JSK lab) | (TBD) |
 | `griphis_description.tar.gz` | JSK GRIPHIS multi-joint modular robot | (JSK lab) | (TBD) |
 | `aero_description.tar.gz` | SEED-Noid / AeroTypeFCESy (JSK config; with-hand & handless) | [`seed-solutions/aero-ros-pkg`](https://github.com/seed-solutions/aero-ros-pkg) | EPL |
+| `jedy_description.tar.gz` | JSK Jedy reconfigurable dual-arm mobile robot | (JSK lab) | BSD |
 | `differential_wrist_sample.tar.gz` | scikit-robot prototyping sample | (in-repo) | MIT |
 
 > ⚠️ **Fetch is CC BY-NC-SA 4.0** (NonCommercial). The license is declared
@@ -132,6 +133,31 @@ upstream paper.
   pages     = {3983--3990},
   year      = {2018},
   publisher = {IEEE},
+}
+
+% --- Jedy (JSK / The University of Tokyo) ---
+@inproceedings{yanokura2025jedy,
+  author    = {Yanokura, Iori and Kojima, Kunio and Yamaguchi, Naoya and
+               Nakane, Aoi and Makabe, Tasuku and Yamaguchi, Manami and
+               Okada, Kei},
+  title     = {Robot Programming Education Using the Tabletop Dual-Armed
+               Wheely Robot ``{Jedy}'': A Practical Approach to Robotics
+               Education and Emerging Challenges},
+  booktitle = {JSME Conference on Robotics and Mechatronics (ROBOMECH)},
+  pages     = {2A2--I08},
+  year      = {2025},
+}
+
+@article{yanokura2026jedy,
+  author    = {Yanokura, Iori and Makabe, Tasuku and Sawada, Tomoka and
+               Sugihara, Kazuki and Kojima, Kunio and Okada, Kei},
+  title     = {Design and Educational Impact of Reconfigurable Robot for
+               Bridging Imagination and Implementation},
+  journal   = {Journal of the Robotics Society of Japan},
+  volume    = {44},
+  number    = {3},
+  pages     = {260--263},
+  year      = {2026},
 }
 ```
 
