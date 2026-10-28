@@ -21,12 +21,35 @@ with `skrobot.models.urdf.RobotModelFromURDF`.
 | `griphis_description.tar.gz` | JSK GRIPHIS multi-joint modular robot | (JSK lab) | (TBD) |
 | `aero_description.tar.gz` | SEED-Noid / AeroTypeFCESy (JSK config; with-hand & handless) | [`seed-solutions/aero-ros-pkg`](https://github.com/seed-solutions/aero-ros-pkg) | EPL |
 | `jedy_description.tar.gz` | JSK Jedy reconfigurable dual-arm mobile robot | (JSK lab) | BSD |
+| `jedy_light_description.tar.gz` | Jedy with lighter meshes, for simulators and browsers (see below) | (JSK lab) | BSD |
 | `differential_wrist_sample.tar.gz` | scikit-robot prototyping sample | (in-repo) | MIT |
 
 > ⚠️ **Fetch is CC BY-NC-SA 4.0** (NonCommercial). The license is declared
 > in `fetch_description/package.xml`, distinct from the umbrella
 > `fetch_ros` repo which is BSD. Redistribution or commercial use
 > requires honoring the NonCommercial clause.
+
+## Light bundles
+
+`*_light_description.tar.gz` is a copy of a bundle with lighter meshes,
+made by `tools/make_light.py`. It extracts to
+`<robot>_light_description/` with its `package://` URIs rewritten, so it
+can sit next to the original. Circuit boards and parts under 1 cm are
+dropped; every other part is simplified with
+[meshoptimizer](https://github.com/zeux/meshoptimizer) as far as it goes
+without moving its surface more than 0.5 mm, and coloured with its
+average colour. Joints, links and collision geometry are unchanged.
+
+| Bundle | Faces | Size |
+|---|---|---|
+| `jedy_description.tar.gz` | 693,916 | 5.0 MB |
+| `jedy_light_description.tar.gz` | 111,917 | 1.0 MB |
+
+```sh
+uv run tools/make_light.py jedy_description.tar.gz
+```
+
+The output is byte-for-byte reproducible from the same input.
 
 ## Citations
 
