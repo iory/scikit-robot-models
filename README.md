@@ -22,6 +22,7 @@ with `skrobot.models.urdf.RobotModelFromURDF`.
 | `aero_description.tar.gz` | SEED-Noid / AeroTypeFCESy (JSK config; with-hand & handless) | [`seed-solutions/aero-ros-pkg`](https://github.com/seed-solutions/aero-ros-pkg) | EPL |
 | `jedy_description.tar.gz` | JSK Jedy reconfigurable dual-arm mobile robot | (JSK lab) | BSD |
 | `jedy_light_description.tar.gz` | Jedy with lighter meshes, for simulators and browsers (see below) | (JSK lab) | BSD |
+| `jedy_draco_description.tar.gz` | Jedy rebuilt from the CAD with Draco-compressed meshes (see below) | (JSK lab) | BSD |
 | `differential_wrist_sample.tar.gz` | scikit-robot prototyping sample | (in-repo) | MIT |
 
 > ⚠️ **Fetch is CC BY-NC-SA 4.0** (NonCommercial). The license is declared
@@ -50,6 +51,32 @@ uv run tools/make_light.py jedy_description.tar.gz
 ```
 
 The output is byte-for-byte reproducible from the same input.
+
+## Draco bundles
+
+`*_draco_description.tar.gz` stores every mesh as a GLB with
+[Draco](https://github.com/google/draco) compression
+(`KHR_draco_mesh_compression`), made by `tools/make_draco.py` with
+scikit-robot's GLB writer. Faces are kept as they are; positions are
+quantised to 14 bits. It extracts to `<robot>_draco_description/` with
+its `package://` URIs rewritten. Loading it needs
+[DracoPy](https://github.com/seung-lab/DracoPy) (`pip install DracoPy`);
+Gazebo and RViz cannot decode Draco meshes.
+
+`jedy_draco_description.tar.gz` is made from a newer CAD export of Jedy,
+not from `jedy_description.tar.gz`: circuit boards removed, each part
+simplified within 0.5 mm, inertial parameters summed from the CAD parts,
+per-part convex collision hulls, and the camera, laser, wheel and
+`base_footprint` frames taken from the CAD. Arm and head joints are the
+same as `jedy_description`'s relative to `base_link`.
+
+| Bundle | Visual faces | Size |
+|---|---|---|
+| `jedy_draco_description.tar.gz` | 339,536 | 0.8 MB |
+
+```sh
+uv run tools/make_draco.py jedy_description/
+```
 
 ## Citations
 
