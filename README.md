@@ -24,6 +24,7 @@ with `skrobot.models.urdf.RobotModelFromURDF`.
 | `jedy_light_description.tar.gz` | Jedy with lighter meshes, for simulators and browsers (see below) | (JSK lab) | BSD |
 | `jedy_draco_description.tar.gz` | Jedy rebuilt from the CAD with Draco-compressed meshes (see below) | (JSK lab) | BSD |
 | `room13bc_description.tar.gz` | Room 13BC, 1st floor of Engineering Building No. 2, the University of Tokyo ("Mechasta", メカスタ), and its 48 folding desks, photo-textured (OBJ + MTL + PNG, and GLB); the Jedy exercise's room | (JSK lab) | MIT |
+| `room13bc_light_description.tar.gz` | Room 13BC with textures of at most 1024 px as JPEG and no GLB, for simulators and browsers (see below) | (JSK lab) | MIT |
 | `differential_wrist_sample.tar.gz` | scikit-robot prototyping sample | (in-repo) | MIT |
 
 > ⚠️ **Fetch is CC BY-NC-SA 4.0** (NonCommercial). The license is declared
@@ -49,6 +50,29 @@ average colour. Joints, links and collision geometry are unchanged.
 
 ```sh
 uv run tools/make_light.py jedy_description.tar.gz
+```
+
+The output is byte-for-byte reproducible from the same input.
+
+## Light textured bundles
+
+`room13bc_light_description.tar.gz` is a copy of the room for simulators
+and browsers, made by `tools/make_light_textures.py`. A photo-textured
+scene is light in geometry and heavy in its photographs, so the copy
+keeps the OBJ + MTL meshes, joints and collision geometry as they are,
+shrinks every texture to at most 1024 px on its longer side and stores it
+as JPEG (quality 85), and drops the GLB meshes and `*_glb.urdf`. It
+extracts to `room13bc_light_description/` with its `package://` URIs
+rewritten. (`make_draco.py` keeps vertex colours only, so it would lose
+the photographs.)
+
+| Bundle | Textures | Size |
+|---|---|---|
+| `room13bc_description.tar.gz` | 27.2 MB (PNG, up to 2882 px) | 54 MB |
+| `room13bc_light_description.tar.gz` | 1.1 MB (JPEG, up to 1024 px) | 1.1 MB |
+
+```sh
+uv run tools/make_light_textures.py room13bc_description.tar.gz
 ```
 
 The output is byte-for-byte reproducible from the same input.
