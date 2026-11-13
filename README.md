@@ -23,6 +23,7 @@ with `skrobot.models.urdf.RobotModelFromURDF`.
 | `jedy_description.tar.gz` | JSK Jedy reconfigurable dual-arm mobile robot | (JSK lab) | BSD |
 | `jedy_light_description.tar.gz` | Jedy with lighter meshes, for simulators and browsers (see below) | (JSK lab) | BSD |
 | `jedy_draco_description.tar.gz` | Jedy rebuilt from the CAD with Draco-compressed meshes (see below) | (JSK lab) | BSD |
+| `room13bc_description.tar.gz` | Room 13BC (Hongo) and its 48 folding desks, photo-textured (OBJ + MTL + PNG, and GLB); the Jedy exercise's room | (JSK lab) | MIT |
 | `differential_wrist_sample.tar.gz` | scikit-robot prototyping sample | (in-repo) | MIT |
 
 > ⚠️ **Fetch is CC BY-NC-SA 4.0** (NonCommercial). The license is declared
