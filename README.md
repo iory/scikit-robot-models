@@ -42,6 +42,11 @@ from photos. Load it with `skrobot.data.room13bc_urdfpath()`
 
 https://github.com/user-attachments/assets/7a388320-4220-4a2d-86d8-c78a7e6a7476
 
+The entrance lounge (four cubby shelves around four seats); it is not in
+the bundle yet.
+
+https://github.com/user-attachments/assets/4ec9ffb1-572a-4dd6-89f0-314563a866c9
+
 ## Light bundles
 
 `*_light_description.tar.gz` is a copy of a bundle with lighter meshes,
