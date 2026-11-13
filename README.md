@@ -32,6 +32,16 @@ with `skrobot.models.urdf.RobotModelFromURDF`.
 > `fetch_ros` repo which is BSD. Redistribution or commercial use
 > requires honoring the NonCommercial clause.
 
+## Room 13BC
+
+`room13bc_description.tar.gz` is room 13BC on the 1st floor of Engineering
+Building No. 2, the University of Tokyo, known as "Mechasta" (メカスタ),
+where the Jedy exercise is held: the room and its 48 folding desks, built
+from photos. Load it with `skrobot.data.room13bc_urdfpath()`
+(`model='scene'|'room'|'desk'`; `light=True` for the light textured bundle).
+
+https://github.com/user-attachments/assets/7a388320-4220-4a2d-86d8-c78a7e6a7476
+
 ## Light bundles
 
 `*_light_description.tar.gz` is a copy of a bundle with lighter meshes,
